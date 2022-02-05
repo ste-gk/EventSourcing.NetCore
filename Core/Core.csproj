@@ -1,14 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <Version>1.0.1.1</Version>
+        <Version>1.0..0</Version>
         <LangVersion>latest</LangVersion>
         <Authors>Forked on GitHub from oskardudycz/EventSourcing.NetCore</Authors>
         <PackageProjectUrl>https://github.com/ste-gk/EventSourcing.NetCore</PackageProjectUrl>
         <RepositoryUrl>https://github.com/ste-gk/EventSourcing.NetCore</RepositoryUrl>
+        <PackageId>STEGK.Forked.EventSourcing.NetCore.Core</PackageId>
+        <Company>STEGK.Forked.EventSourcing.NetCore.Core</Company>
+        <Product>STEGK.Forked.EventSourcing.NetCore.Core</Product>
     </PropertyGroup>
 
     <ItemGroup>
