@@ -26,9 +26,9 @@ jobs:
               run: dotnet build Core/EventSourcing.NetCore.Core.sln --configuration Release /p:Version=$VERSION --no-restore
 
             - name: Pack
-              run: dotnet pack Core/Core.csproj --configuration Release /p:Version=$VERSION --no-build --output .
+              run: dotnet pack Core/Core.csproj -p:PackageID=STEGK.Forked.EventSourcing.NetCore.Core --configuration Release /p:Version=$VERSION --no-build --output .
 
             - name: Push
-              run: dotnet nuget push STEGK.Forked.EventSourcing.NetCore.Core.$VERSION.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN}
+              run: dotnet nuget push ./STEGK.Forked.EventSourcing.NetCore.Core.$VERSION.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN}
               env:
                 GITHUB_TOKEN: ${{ secrets.NUGET_API_KEY }}
