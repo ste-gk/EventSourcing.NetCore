@@ -1,9 +1,6 @@
-name: dotnet_nuget
+name: NuGet Package
 
-on:
-  push:
-    tags:
-    - "v[0-9]+.[0-9]+.[0-9]+"
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
