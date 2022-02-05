@@ -27,8 +27,7 @@ public static class ExceptionToHttpStatusMapper
             UnauthorizedAccessException _ => HttpStatusCode.Unauthorized,
             NotImplementedException _ => HttpStatusCode.NotImplemented,
             InvalidOperationException _ => HttpStatusCode.Conflict,
-            ArgumentException _ => HttpStatusCode.BadRequest,
-            ValidationException _ => HttpStatusCode.BadRequest,
+            ArgumentException _ or ValidationException _ => HttpStatusCode.BadRequest,
             _ => CustomMap?.Invoke(exception) ?? HttpStatusCode.InternalServerError
         };
 
