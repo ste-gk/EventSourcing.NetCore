@@ -14,9 +14,6 @@ jobs:
             - name: Check Out Repo
               uses: actions/checkout@v1
 
-            - name: Start containers
-              run: docker-compose -f "docker-compose.ci.yml" up -d
-
             - name: Setup .NET Core
               uses: actions/setup-dotnet@v1
               with:
