@@ -23,7 +23,7 @@ jobs:
               run: dotnet restore
 
             - name: Build
-              run: dotnet build Core/EventSourcing.NetCore.Core.sln --configuration Release /p:Version=$VERSION --no-restore
+              run: dotnet build Core/EventSourcing.NetCore.Core.sln --configuration Release --no-restore
 
             - name: Pack
               run: dotnet pack Core/Core.csproj -p:PackageID=STEGK.Forked.EventSourcing.NetCore.Core --configuration Release /p:Version=$VERSION --no-build --output .
